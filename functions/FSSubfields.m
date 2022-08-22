@@ -1,0 +1,5 @@
+function BIDS = FSSubfields(BIDS)
+%
+%
+%
+
