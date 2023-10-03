@@ -21,7 +21,7 @@ PETPrep(data_dir, config)
 ### Parameters:
 
 - **data_dir (str)**: This is the path directing to the BIDS data directory.
-- **config (str)**: This is the path directing to the PETPrep configuration file.
+- **config (str)**: This is the path directing to the PETPrep configuration file. This config should be placed in a 'code' directory in the main BIDS directory. Example: 'config1.json'.
 
 **Note:** The function doesn't return any values.
 
