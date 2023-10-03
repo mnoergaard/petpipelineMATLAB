@@ -1,0 +1,28 @@
+{
+    "env": {
+        "derivatives_dir": "PETPrep", 
+        "nproc": 8
+    },
+    "preproc": {
+        "mc": {
+            "precomp": "no_hmc"
+        },
+        "coreg": {
+            "dof": 6
+        },
+        "pvc": {
+            "pvc": "agtm",
+            "psf": 4,
+            "hb": "10 11 12 49 50 51",
+            "ref": "8 47",
+            "no_rescale": true,
+            "save_input": true
+        },
+        "kinmod": {
+            "model": "srtm",
+            "start_time": 0,
+            "end_time": 6000
+        }            
+    }
+}
+

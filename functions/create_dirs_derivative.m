@@ -12,21 +12,16 @@ else
     BIDS.config.env.derivatives_dir = [BIDS.config.env.derivatives_dir config_num{1}];
 end
 
-mkdir(fullfile(BIDS.pth, 'derivatives'));
-cd(fullfile(BIDS.pth, 'derivatives'));
+mkdir(fullfile(BIDS.pth, 'derivatives',BIDS.config.env.derivatives_dir));
+cd(fullfile(BIDS.pth, 'derivatives',BIDS.config.env.derivatives_dir));
 for i = 1:numel(bids.query(BIDS, 'subjects'))
-    subject_list = bids.query(BIDS, 'subjects');
-    mkdir(fullfile(pipeline_name, ['sub-' num2str(subject_list{i})]));
-    for j = 1:numel(bids.query(BIDS, 'sessions'))
-        session_list = bids.query(BIDS, 'sessions');
-        mkdir(fullfile(pipeline_name, ['sub-' num2str(subject_list{i})], ...
-            ['ses-' session_list{j}]));
-        for k = 1:numel(bids.query(BIDS, 'modalities'))
-            modalities_list = bids.query(BIDS, 'modalities');
-            mkdir(fullfile(pipeline_name, ['sub-' num2str(subject_list{i})], ...
-                ['ses-' session_list{j}], ...
-                modalities_list{k}));
-        end
+    cd(fullfile(BIDS.pth, 'derivatives',BIDS.config.env.derivatives_dir))
+    mkdir(BIDS.subjects(i).name)
+    cd(BIDS.subjects(i).name)
+    mkdir(BIDS.subjects(i).session)
+    cd(BIDS.subjects(i).session)
+    mkdir('anat')
+    mkdir('pet')
     end
 end
 
