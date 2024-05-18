@@ -1,8 +1,8 @@
-# PETPrepMATLAB
+# PETPipelineMATLAB
 
 ## Description
 
-The `PETPrep` pipeline is a state-of-the-art PET preprocessing pipeline (wrapper) for MATLAB. This pipeline is designed to execute multiple preprocessing steps on BIDS structured datasets that have at least one dynamic PET scan and one anatomical MRI scan. The key steps integrated within the pipeline include:
+The `PETPipeline` pipeline is a state-of-the-art PET preprocessing pipeline (wrapper) for MATLAB. This pipeline is designed to execute multiple preprocessing steps on BIDS structured datasets that have at least one dynamic PET scan and one anatomical MRI scan. The key steps integrated within the pipeline include:
 
 - **Motion correction**
 - **Co-registration**
@@ -12,7 +12,7 @@ The `PETPrep` pipeline is a state-of-the-art PET preprocessing pipeline (wrapper
 
 ## Usage
 
-To utilize the `PETPrep` function in your MATLAB environment:
+To utilize the `PETPipeline` function in your MATLAB environment:
 
 ```matlab
 PETPrep(data_dir, config)
